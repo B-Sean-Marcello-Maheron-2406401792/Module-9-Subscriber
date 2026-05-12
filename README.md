@@ -29,3 +29,10 @@ Berdasarkan analisis kode, terdapat beberapa hal yang dapat ditingkatkan (improv
 ### “Simulation slow subscriber”
 
 ![img.png](img.png)
+
+### “Reflection and Running at least three subscribers”
+![img_1.png](img_1.png)
+
+### Refleksi
+
+Implementasi sistem pada infrastruktur GitHub Codespaces membuktikan bahwa pola Competing Consumers sangat efektif dalam menangani skalabilitas secara horizontal di lingkungan cloud. Dengan menjalankan beberapa subscriber secara paralel di dalam mesin virtual cloud, terlihat bahwa beban kerja dari antrean RabbitMQ dapat didistribusikan secara efisien melalui mekanisme round robin, yang secara signifikan mempercepat pembersihan lonjakan pesan (spike reduction) dibandingkan hanya menggunakan satu unit pemrosesan. Eksperimen ini juga menyoroti pentingnya manajemen jaringan dan keamanan pada arsitektur terdistribusi, di mana penggunaan kontainer Docker di cloud memerlukan pengaturan port forwarding dan autentikasi pengguna yang tepat agar komunikasi antar layanan tetap terjaga. Hasil pengamatan menunjukkan bahwa sistem asinkron ini mampu menjaga integritas data tanpa adanya duplikasi pemrosesan, sekaligus memberikan fleksibilitas untuk menambah kapasitas sistem secara instan tanpa perlu mengubah kode sumber utama, yang merupakan karakteristik krusial dalam membangun aplikasi berskala besar yang tangguh.
