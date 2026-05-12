@@ -1,0 +1,14 @@
+C:\Users\seanm\Downloads\rev-modul-9\subscriber\target\debug\deps\serde-4d7138cca374ea1f.d: C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\seanm\Downloads\rev-modul-9\subscriber\target\debug\build\serde-571a2c04a148660c\out/private.rs
+
+C:\Users\seanm\Downloads\rev-modul-9\subscriber\target\debug\deps\libserde-4d7138cca374ea1f.rlib: C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\seanm\Downloads\rev-modul-9\subscriber\target\debug\build\serde-571a2c04a148660c\out/private.rs
+
+C:\Users\seanm\Downloads\rev-modul-9\subscriber\target\debug\deps\libserde-4d7138cca374ea1f.rmeta: C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\seanm\Downloads\rev-modul-9\subscriber\target\debug\build\serde-571a2c04a148660c\out/private.rs
+
+C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs:
+C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs:
+C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs:
+C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs:
+C:\Users\seanm\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs:
+C:\Users\seanm\Downloads\rev-modul-9\subscriber\target\debug\build\serde-571a2c04a148660c\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\seanm\\Downloads\\rev-modul-9\\subscriber\\target\\debug\\build\\serde-571a2c04a148660c\\out

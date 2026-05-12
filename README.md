@@ -14,3 +14,12 @@ String guest:guest@localhost:5672 merupakan Connection URI yang digunakan oleh p
 
 
 Alasan mengapa jumlah antrean (total queue) di sistem saya bisa mencapai angka **21** adalah karena RabbitMQ sedang menjalankan perannya sebagai **buffer** (penyangga) dalam sistem asinkron. Angka tersebut muncul karena saya telah menjalankan perintah Publisher sebanyak beberapa kali secara berturut-turut dalam waktu singkat, sementara di sisi Subscriber telah diaktifkan simulasi jeda waktu (`sleep`) selama 1 detik untuk setiap pesan yang diproses. Karena kecepatan pengiriman pesan dari Publisher jauh melampaui kemampuan Subscriber untuk menyelesaikannya secara instan, pesan-pesan yang datang kemudian ditampung sementara oleh RabbitMQ di dalam antrean dengan status **"Ready"**. Munculnya angka 21 ini membuktikan bahwa arsitektur berbasis event ini sangat handal dalam menjaga ketersediaan data; sistem menjamin tidak ada pesan yang hilang meskipun terjadi ketidakseimbangan beban kerja (load) antara pihak pengirim dan penerima.
+
+
+### Reflection and Running at least three subscribers
+
+![Screenshot 2026-05-12 171406.png](Screenshot%202026-05-12%20171406.png)
+
+Penggunaan tiga subscriber sekaligus menunjukkan bagaimana pola Competing Consumers secara efektif meningkatkan skalabilitas sistem, di mana lonjakan (spike) pesan pada dashboard RabbitMQ berkurang jauh lebih cepat dibandingkan dengan hanya satu subscriber. Hal ini terjadi karena RabbitMQ mendistribusikan beban pesan dari antrean yang sama secara paralel ke semua unit pemrosesan yang tersedia menggunakan mekanisme Round Robin, sehingga total waktu eksekusi berkurang secara signifikan karena beban kerja dibagi rata.
+
+Berdasarkan analisis kode, terdapat beberapa hal yang dapat ditingkatkan (improvement), seperti penerapan Quality of Service (QoS) atau prefetch count agar pembagian pesan lebih adil berdasarkan kesiapan subscriber, serta penambahan logika error handling yang lebih kuat untuk menggantikan unwrap() guna mencegah aplikasi berhenti total saat terjadi gangguan koneksi atau kegagalan pemrosesan pesan.
