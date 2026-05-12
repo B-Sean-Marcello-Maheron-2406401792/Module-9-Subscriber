@@ -23,3 +23,9 @@ Alasan mengapa jumlah antrean (total queue) di sistem saya bisa mencapai angka *
 Penggunaan tiga subscriber sekaligus menunjukkan bagaimana pola Competing Consumers secara efektif meningkatkan skalabilitas sistem, di mana lonjakan (spike) pesan pada dashboard RabbitMQ berkurang jauh lebih cepat dibandingkan dengan hanya satu subscriber. Hal ini terjadi karena RabbitMQ mendistribusikan beban pesan dari antrean yang sama secara paralel ke semua unit pemrosesan yang tersedia menggunakan mekanisme Round Robin, sehingga total waktu eksekusi berkurang secara signifikan karena beban kerja dibagi rata.
 
 Berdasarkan analisis kode, terdapat beberapa hal yang dapat ditingkatkan (improvement), seperti penerapan Quality of Service (QoS) atau prefetch count agar pembagian pesan lebih adil berdasarkan kesiapan subscriber, serta penambahan logika error handling yang lebih kuat untuk menggantikan unwrap() guna mencegah aplikasi berhenti total saat terjadi gangguan koneksi atau kegagalan pemrosesan pesan.
+
+# BONUS
+
+### “Simulation slow subscriber”
+
+![img.png](img.png)
